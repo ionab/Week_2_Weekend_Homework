@@ -11,12 +11,13 @@ class TestRoom < MiniTest::Test
     @song2 = Song.new("The Boxer", "Simon and Garfunkel")
     @guest1 = Guest.new("Kelsie")
     @room = Room.new("The Music Room", [@guest1], [@song1, @song2], 4)
-
   end
 
   def test_room_has_name()
     assert_equal("The Music Room", @room.name)
   end
-
+  def test_room_has_capacity()
+    assert_equal(4, @room.capacity)
+  end
 
 end

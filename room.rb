@@ -6,7 +6,7 @@ class Room
       @name = name
       @guest = []
       @songs = []
-      @capacity = []
+      @capacity = capacity
 
     end
 
