@@ -5,9 +5,8 @@ class Room
     def initialize(name, guests, songs, capacity)
       @name = name
       @guests = []
-      @songs = []
+      @songs = songs
       @capacity = capacity
-
     end
 
     def check_in_guest(guest)
@@ -17,10 +16,4 @@ class Room
     def check_out_guest()
       return @guests.clear
     end
-
-
-
-
-
-
 end
