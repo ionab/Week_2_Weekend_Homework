@@ -11,4 +11,11 @@ class Guest
       return @money >= item
     end
 
+    def pay_fee(item)
+      if sufficient_funds(item)
+        @money -= item
+      end
+    end
+
+
 end
