@@ -23,5 +23,10 @@ class TestGuest < MiniTest::Test
     fee = @room.entry_fee
     assert_equal(true, @guest.sufficient_funds(fee))
   end
+  def test_guest_has_insufficent_funds_for_entry_fee()
+    room2 = Room.new("The Music Room2", @guests, @songs, 4, 80.0, 0.0)
+    fee = room2.entry_fee
+    assert_equal(false, @guest.sufficient_funds(fee))
+  end
 
 end
