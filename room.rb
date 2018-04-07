@@ -1,13 +1,14 @@
 class Room
 
-    attr_accessor :name, :guests, :songs, :capacity
+    attr_accessor :name, :guests, :songs, :capacity, :entry_fee, :till
 
-    def initialize(name, guests, songs, capacity, entry_fee)
+    def initialize(name, guests, songs, capacity, entry_fee, till)
       @name = name
       @guests = []
       @songs = songs
       @capacity = capacity
       @entry_fee = entry_fee
+      @till = till
     end
 
     def check_in_guest(guests, capacity)

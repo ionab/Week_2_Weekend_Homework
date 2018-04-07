@@ -13,7 +13,7 @@ class TestRoom < MiniTest::Test
     songs = [@song1, @song2]
     @guest1 = Guest.new("Kelsie", 50.0)
     @guests = [@guest1]
-    @room = Room.new("The Music Room", @guests, songs, 4, 50.0)
+    @room = Room.new("The Music Room", @guests, songs, 4, 5.0, 0.0)
   end
 
   def test_room_has_name()
@@ -22,6 +22,9 @@ class TestRoom < MiniTest::Test
 
   def test_room_capacity()
     assert_equal(4, @room.capacity)
+  end
+  def test_room_fee()
+    assert_equal(5.0, @room.entry_fee)
   end
 
   def test_check_in_guest()
@@ -45,4 +48,7 @@ class TestRoom < MiniTest::Test
     @room.add_song(@song3)
     assert_equal(3, @room.songs().length())
   end
+
+  # def test_guest_pays_entry_fee()
+  # end
 end
