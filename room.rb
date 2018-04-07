@@ -13,9 +13,14 @@ class Room
     def check_in_guest(guest)
       return @guests << guest
     end
-    def count_guests_in_room
-      return @songs.length
+
+    def check_out_guest()
+      return @guests.clear
     end
-  
+
+
+
+
+
 
 end
