@@ -16,5 +16,6 @@ class Room
     def count_guests_in_room
       return @songs.length
     end
+  
 
 end

@@ -11,7 +11,8 @@ class TestRoom < MiniTest::Test
     @song2 = Song.new("The Boxer", "Simon and Garfunkel")
     songs = [[@song1, @song2]]
     @guest1 = Guest.new("Kelsie")
-    @room = Room.new("The Music Room", [@guest1], songs, 4)
+    @guests = [@guest1]
+    @room = Room.new("The Music Room", @guests, songs, 4)
   end
 
   def test_room_has_name()
@@ -23,6 +24,7 @@ class TestRoom < MiniTest::Test
 
   def test_check_in_guest()
      assert_equal(1, @room.check_in_guest(@guest1).count)
-   end
+  end
+
 
 end
