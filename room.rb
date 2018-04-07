@@ -16,4 +16,8 @@ class Room
     def check_out_guest()
       return @guests.clear
     end
+
+    def add_song(new_song)
+      return @songs.push(new_song)
+    end
 end
