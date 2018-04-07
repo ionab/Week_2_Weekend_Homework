@@ -11,9 +11,9 @@ class TestRoom < MiniTest::Test
     @song2 = Song.new("The Boxer", "Simon and Garfunkel")
     @song3 = Song.new("Gimmie Shelter", "Rolling Stones")
     songs = [@song1, @song2]
-    @guest1 = Guest.new("Kelsie")
+    @guest1 = Guest.new("Kelsie", 50.0)
     @guests = [@guest1]
-    @room = Room.new("The Music Room", @guests, songs, 4)
+    @room = Room.new("The Music Room", @guests, songs, 4, 50.0)
   end
 
   def test_room_has_name()
@@ -29,7 +29,7 @@ class TestRoom < MiniTest::Test
   end
 
   def test_room_full()
-    guests = [@guest1, Guest.new("Katie"), Guest.new("Mhairi"), Guest.new("Caitlin"), Guest.new("Claire")]
+    guests = [@guest1, Guest.new("Katie", 20.0), Guest.new("Mhairi", 30.0), Guest.new("Caitlin", 15.0), Guest.new("Claire", 30.0)]
     assert_equal("Sorry that room is full!", @room.check_in_guest(guests, @room.capacity))
   end
 
