@@ -49,6 +49,4 @@ class TestRoom < MiniTest::Test
     assert_equal(3, @room.songs().length())
   end
 
-  # def test_guest_pays_entry_fee()
-  # end
 end
