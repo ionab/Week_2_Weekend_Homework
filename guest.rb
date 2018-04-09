@@ -18,11 +18,13 @@ class Guest
       end
     end
 
-    def cheer_for_fav_song(songs, guest)
-      fav_song = guest.favourite_song
-        if songs.include?(favourite_song)
-          return "Whoo"
-        end
+#Here you want to only pass in 1 think, before you were passing in
+#two objects - the sonng and guest. you should never be passing in the
+#guest in the guest class. You have access to the favourite song so just use the
+#@favourite_song and pass this in.
+    def cheer_for_fav_song(song)
+      if songs.include?(@favourite_song)
+        return "Whoo"
+      end
     end
-
 end
